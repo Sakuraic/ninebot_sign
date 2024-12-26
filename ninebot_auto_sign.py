@@ -75,10 +75,10 @@ class Ninebot():
         return msg
 
 
-# if __name__ == "__main__":
-#     deviceId_value = "BC550B6A-3276-4775-90E6-3BF613AAEB35"  # 此处替换为真实的deviceId值
-#     authorization_value = "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjk4MDI2MjMzNzk5NTEyMDY0IiwiYXVkaWVuY2UiOiJtb2JpbGUiLCJ1c2VyX25hbWUiOiJrYWlwY2MiLCJjbGllbnRfaWQiOiJhcHBfY2xpZW50X2lkX3ZlaGljbGUiLCJyZWdfZGF0ZSI6MTcyOTUxNTE3MCwiYXVkIjpbImlvdC13ZWJhcHAiXSwiYXJlYUNvZGUiOiI4NiIsInBob25lIjoiMTgwNjYxMjg0NDgiLCJzY29wZSI6WyJyZWFkIl0sImV4cCI6MTczNzI3MDEzMSwicmVnaW9uIjoiYmoiLCJqdGkiOiJ5MUtPd0QtaXdqYWM5bjNhVWZyc0JjY1hScVEiLCJlbWFpbCI6bnVsbH0.v1MlCvcl_S6WNmEj0cOBJfHFepfd15BR2tixdqOZMQl2vH0do5mtFE098wGvXPDDP8VM0PHzbm9xtgI5pqUFLcqVX7zpAUyDlkcU-c_OlpzCFeQlHcLJZaa6lNYiuCYJiiA0CxdaKtb3JXSOd86SL_TFFDgIpr4-BFdvfIMCqig"  # 此处替换为真实的authorization值
-#     res = Ninebot(deviceId_value, authorization_value).main()
-#     print(res)
+if __name__ == "__main__":
+    deviceId_value = ${{ AUTHORIZATION_VALUE }}
+    authorization_value = $ {{ DEVICEID_VALUE }}
+    res = Ninebot(deviceId_value, authorization_value).main()
+    print(res)
     
     

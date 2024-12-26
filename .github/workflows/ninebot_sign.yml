@@ -48,6 +48,6 @@ jobs:
         python3 ./ninebot_auto_sign.py
   env: 
   #设置secrets的环境变量
-    deviceId_value: ${{ deviceId_value }}
-    authorization_value: ${{ authorization_value }}
+    deviceId_value: ${{ DEVICEID_VALUE }}
+    authorization_value: ${{ AUTHORIZATION_VALUE }}
 

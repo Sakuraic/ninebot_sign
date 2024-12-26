@@ -28,6 +28,3 @@ jobs:
     - name: Test
       run: |
         python ninebot_auto_sign.py
-      env: 
-        deviceId_value: ${{ DEVICEID_VALUE }}
-        authorization_value: ${{ AUTHORIZATION_VALUE }}

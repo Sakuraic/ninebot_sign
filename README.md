@@ -1,5 +1,5 @@
-# 九号app自动化
-九号出行APP自动签到
+# 九号出行app自动化签到
+
 基于Github Acttion 实现自动化
 
 使用方式：
@@ -9,7 +9,6 @@
 3. 进入项目的Action，选择ninebot_sign ---> Run workflow 测试
 ![alt text](<CleanShot 2025-02-21 at 10.56.25@2x.png>)
 4. 查看app是否已签到，结束。
-
 
 ## 免责声明
 
@@ -23,8 +22,7 @@
 
 **下载后 24 小时内请删除脚本。**
 
+## 参考
 
-## 参考出自
-
-[KotoriMinami](https://github.com/KotoriMinami/qinglong-sign)
+[KotoriMinami](https://github.com/KotoriMinami/qinglong-sign)<br>
 [tech-shrimp](https://github.com/tech-shrimp/GithubActionSample)

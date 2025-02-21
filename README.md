@@ -4,7 +4,7 @@
 
 使用方式：
 1. Fork本项目
-2. 移动端抓包九号APP，抓取两个参数的值 DEVICEID_VALUE 、AUTHORIZATION_VALUE 后填入 SSettings ----> Secrets and variables ---> Actions --> New repository secret
+2. 移动端抓包九号APP，抓取两个参数的值 DEVICEID_VALUE 、AUTHORIZATION_VALUE 后填入 Settings ----> Secrets and variables ---> Actions --> New repository secret
 ![alt text](<CleanShot 2025-02-21 at 10.46.02@2x.png>)
 3. 进入项目的Action，选择ninebot_sign ---> Run workflow 测试
 ![alt text](<CleanShot 2025-02-21 at 10.56.25@2x.png>)

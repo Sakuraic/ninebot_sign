@@ -31,3 +31,4 @@ jobs:
       env:
         DEVICEID_VALUE: ${{ secrets.DEVICEID_VALUE }}
         AUTHORIZATION_VALUE: ${{ secrets.AUTHORIZATION_VALUE }}
+    - uses: gautamkrishnar/keepalive-workflow@master

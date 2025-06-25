@@ -1,0 +1,44 @@
+name: Auto-Commit to Prevent Sleep
+on:
+  schedule:
+    # 每天UTC时间00:00检查（确保频率覆盖59天窗口）
+    - cron: '0 0 * * *'
+  # 支持手动触发调试
+  workflow_dispatch:
+
+jobs:
+  check-and-commit:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0  # 获取完整提交历史
+
+    - name: Configure Git
+      run: |
+        git config user.name "Your Name"
+        git config user.email "your-email@example.com"
+
+    - name: Calculate days since last commit
+      id: date-check
+      run: |
+        # 获取最新提交的日期（ISO 8601格式）
+        LAST_COMMIT_DATE=$(git log -1 --format=%cd --date=iso-strict)
+        # 计算当前时间与上次提交的时间差（秒）
+        DIFF_SECONDS=$(($(date +%s) - $(date -d "$LAST_COMMIT_DATE" +%s)))
+        # 转换为天数（59天 = 5,097,600秒）
+        DAYS_DIFF=$((DIFF_SECONDS / 86400))
+        
+        # 若≥59天则设置输出变量为true
+        if [ $DAYS_DIFF -ge 59 ]; then
+          echo "should_commit=true" >> $GITHUB_OUTPUT
+        else
+          echo "should_commit=false" >> $GITHUB_OUTPUT
+        fi
+
+    - name: Create empty commit if needed
+      if: steps.date-check.outputs.should_commit == 'true'
+      run: |
+        git commit --allow-empty -m "Auto-commit: Keep workflow active"
+        git push origin main
